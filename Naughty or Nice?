@@ -1,0 +1,5 @@
+def what_list_am_i_on(actions)
+  naughty = actions.select{|action| action[0].downcase =~ /[b, f, k]/ }.length
+  nice = actions.select{|action| action[0].downcase =~ /[g, s, n]/ }.length
+  naughty >= nice ? "naughty" : "nice"
+end
